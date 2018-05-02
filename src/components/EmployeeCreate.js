@@ -13,10 +13,12 @@ class EmployeeCreate extends Component {
             shift,
         } = this.props;
 
-        this.props.employeeCreate({ name, phone, shift });
+        this.props.employeeCreate({ name, phone, shift: shift || 'monday' });
     }
 
     render() {
+        console.log(this.props.employee);
+        
         return (
             <Card>
                 <CardSection>
