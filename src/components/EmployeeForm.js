@@ -33,7 +33,6 @@ class EmployeeForm extends Component {
                 <CardSection style={{ flexDirection: 'column' }}>
                     <Text style={styles.pickerLabelStyle}>Shift</Text>
                     <Picker
-                        style={styles.pickerStyle}
                         selectedValue={this.props.shift}
                         onValueChange={value => this.props.employeeUpdate({ prop: 'shift', value })}
                     >
@@ -55,9 +54,7 @@ const styles = {
     pickerLabelStyle: {
         fontSize: 18,
         paddingLeft: 20,
-    },
-    pickerStyle: {
-    },
+    }
 };
 
 const mapStateToProps = (state) => {
